@@ -8,42 +8,63 @@
     --tabs-height: 40px;
 }
 
+.tabs {
+    background-color: var(--tabs-border-color);
+}
+
+
+
 .tab-container {
     position: relative;
     padding-top: var(--tabs-height); /*Aquí se colocan las pestañas*/
     height: calc(100vh - var(--tabs-height));
+    background-color: var(--tabs-lite-color);
 }
 
 .tab-content {
     display: none;
     height: 100%;
+    color: var(--tabs-text-color);
 }
 
 .tab:target .tab-content, .tab:last-of-type .tab-content{
     display: block;
+    background-color: var(--tabs-lite-color);
 }
 
 .tab:target ~ .tab:last-of-type .tab-content {
     display: none;
 }
 
-#tab1 > a {
-    --tabs-position:0;
-}
-#tab2 > a {
-    --tabs-position:1;
+#tab1>a, 
+#tab2>a, 
+#tab3>a{
+    text-decoration: none;
+    color: var(--tabs-text-color);
 }
 #tab3 > a {
     --tabs-position:2;
 }
 
+#tab1 > a {
+    --tabs-position:0;   
+}
+#tab2 > a {
+    --tabs-position:1;  
+}
+#tab3 > a {
+    --tabs-position:2;
+}
+.tab-background{
+    background-color: var(--tabs-lite-color);
+}
 .tab>a {
     text-align: center;
     position: absolute;
     width: calc(var(--tabs-width));
     height: calc(var(--tabs-height) + var(--tabs-border-size));
     top:0;
-    left:calc(var(--tabs-width) * var(--tabs-position)) /*Posición de cada pestaña*/
+    left:calc(var(--tabs-width) * var(--tabs-position)); /*Posición de cada pestaña*/
 }
 /*Cambio de color de la pestaña dinámica*/
 .tab:target>a, .tab>:last-of-type>a{
