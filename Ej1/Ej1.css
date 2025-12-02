@@ -8,17 +8,24 @@
     --tabs-height: 40px;
 }
 
-.tabs {
-    background-color: var(--tabs-border-color);
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-
+.tabs {
+    width: max-content;
+    height: max-content;
+    margin: 10px auto;
+}
 
 .tab-container {
     position: relative;
-    padding-top: var(--tabs-height); /*Aquí se colocan las pestañas*/
-    height: calc(100vh - var(--tabs-height));
-    background-color: var(--tabs-lite-color);
+    padding-top: var(--tabs-height); 
+    height: 600px;
+    width: 600px;
+    background-color: var(--tabs-dark-color);
+    color: var(--tabs-text-color); 
 }
 
 .tab-content {
@@ -42,9 +49,7 @@
     text-decoration: none;
     color: var(--tabs-text-color);
 }
-#tab3 > a {
-    --tabs-position:2;
-}
+
 
 #tab1 > a {
     --tabs-position:0;   
@@ -66,7 +71,7 @@
     top:0;
     left:calc(var(--tabs-width) * var(--tabs-position)); /*Posición de cada pestaña*/
 }
-/*Cambio de color de la pestaña dinámica*/
+
 .tab:target>a, .tab>:last-of-type>a{
     background-color: var(--tabs-lite-color);
     z-index: 200;

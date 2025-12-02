@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    margin: 20px 0;
+    color: #333;
+}
+
+/* --- Estilos del Menú Superior (Navbar) --- */
+.navbar {
+    background-color: #012345; /* Color oscuro (similar a --tabs-dark-color) */
+    color: white;
+    padding: 0;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu > li {
+    position: relative; /* Clave para que el submenu se posicione respecto a este elemento */
+}
+
+.menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+/* Estilo para el ítem activo o que despliega */
+.menu > li:hover > a,
+.menu > li.active > a {
+    background-color: #345678; /* Color similar al ejemplo (similar a --tabs-lite-color) */
+}
+
+/* --- Estilos del Submenú Desplegable --- */
+.submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%; /* Empieza justo debajo del elemento padre */
+    left: 0;
+    background-color: #012345;
+    min-width: 200px;
+    display: none; /* Ocultar por defecto */
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Mostrar submenú al pasar el ratón por el elemento padre */
+.menu > li:hover .submenu {
+    display: block;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.submenu a:hover {
+    background-color: #345678;
+}
+
+/* Contenido de la página */
+.content {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.faq-container {
+    margin-top: 30px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq {
+    background-color: #345678; /* Color oscuro */
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.faq:hover {
+    background-color: #012345;
+}
+
+.faq span {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* El contenido de la respuesta */
+.faq-answer {
+    background-color: white;
+    padding: 0 15px;
+    max-height: 0; /* Oculta el contenido con transición */
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer p {
+    margin: 15px 0;
+    color: #333;
+}
+
+/* Estilo para el estado ACTIVO (visible) */
+.faq-item.active .faq {
+    background-color: #012345;
+}
+
+.faq-item.active .faq-answer {
+    /* La altura se calcula con JS, aquí solo damos un máximo grande para la transición */
+    max-height: 500px; 
+    padding: 15px;
+}
+
+.faq-item.active .faq span {
+    transform: rotate(45deg); /* Gira el '+' para simular un 'x' o cierre */
+}
