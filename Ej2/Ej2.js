@@ -1,28 +1,20 @@
-document.querySelectorAll(".faq").forEach(pregunta => { /* */
-    pregunta.addEventListener("click", () => { /* */
-        const item = pregunta.parentElement; /* */
-        
-        // La ayuda sugería usar `display: block/none`. Usaremos `classList.toggle` 
-        // y `maxHeight` para permitir una transición suave en CSS, que es una práctica moderna.
-        // Si se insiste en usar display: block/none directamente:
+document.querySelectorAll(".faq").forEach(pregunta => {
+    pregunta.addEventListener("click", () => {
+        const item = pregunta.parentElement;
+        const respuesta = pregunta.nextElementSibling;
 
-        const respuesta = pregunta.nextElementSibling; /* */
-        
-        // Lógica de alternar la clase 'active'
-        item.classList.toggle("active"); /* */
-        
-        // Si usamos la clase 'active' en el CSS con max-height, la funcionalidad queda más limpia.
-        // Usamos la altura real del scroll para una transición precisa.
+        // Alterna la clase 'active' para cambiar estilos CSS
+        item.classList.toggle("active");
+
+        // Lógica para alternar la altura (mejor que display: block/none para transiciones)
         if (item.classList.contains("active")) {
-            // Abrir
+            // Abrir: calcula la altura real del contenido
             respuesta.style.maxHeight = respuesta.scrollHeight + "px";
         } else {
-            // Cerrar
+           
             respuesta.style.maxHeight = "0";
         }
-        
-        // NOTA: Si necesitas que use EXCLUSIVAMENTE la lógica de la ayuda:
-        // respuesta.style.display = (respuesta.style.display === "block" ? "none" : "block"); /* */
 
+     
     });
 });

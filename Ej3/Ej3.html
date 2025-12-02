@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio 3 - Carrusel</title>
+    <link rel="stylesheet" href="carrusel.css">
 </head>
 <body>
-    
+
+    <div class="carrusel-wrapper">
+        <div class="carrusel">
+            
+            <input type="radio" name="slides" id="slide1" checked>
+            <input type="radio" name="slides" id="slide2">
+            <input type="radio" name="slides" id="slide3">
+
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://picsum.photos/id/1015/1200/800" alt="Montaña">
+                    <div class="slide-content">
+                        <h2>Bienvenido al carrusel</h2>
+                        <p>Cucu</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://picsum.photos/id/237/1200/800" alt="Perro">
+                    <div class="slide-content">
+                        <h2>Segunda diapositiva</h2>
+                        <p>Contenido del segundo slide</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://picsum.photos/id/10/1200/800" alt="Cascada">
+                    <div class="slide-content">
+                        <h2>Tercera diapositiva</h2> [cite: 148]
+                        <p>Requete tras</p> [cite: 149]
+                    </div>
+                </div>
+            </div>
+
+            <label for="slide3" class="arrow arrow-left">&#10094;</label>
+            <label for="slide1" class="arrow arrow-left">&#10094;</label>
+            <label for="slide2" class="arrow arrow-left">&#10094;</label>
+
+            <label for="slide2" class="arrow arrow-right">&#10095;</label>
+            <label for="slide3" class="arrow arrow-right">&#10095;</label>
+            <label for="slide1" class="arrow arrow-right">&#10095;</label>
+
+            <div class="nav-dots">
+                <label for="slide1"></label> [cite: 243]
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
