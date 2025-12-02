@@ -148,7 +148,6 @@ body {
     transform: scale(1.2);
 }
 
-[cite_start]{}
 @media (max-width: 600px) {
     .carrusel {
         width: 90%; 
