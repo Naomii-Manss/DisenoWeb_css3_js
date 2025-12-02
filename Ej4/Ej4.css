@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Estilo de cuadrícula flexible y responsive */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta { /* Estilo de la tarjeta individual */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 450px; /* Altura fija para uniformidad visual */
+    object-fit: cover;
+    display: block;
+}
+
+.tarjeta h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 15px 0 5px 0;
+}
+
+.tarjeta p {
+    color: #555;
+    margin: 5px 0;
+    padding: 0 15px 15px 15px;
+}
+
+.tarjeta p strong {
+    color: #012345;
+}
+
+/* Estilo para el mensaje de error */
+#galeria p {
+    grid-column: 1 / -1; 
+    text-align: center;
+    font-size: 1.2rem;
+}

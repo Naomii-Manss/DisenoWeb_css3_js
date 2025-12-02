@@ -1,0 +1,20 @@
+[
+    {
+      "titulo": "Interstellar",
+      "anio": 2014,
+      "imagen": "https://es.web.img3.acsta.net/pictures/14/10/02/11/07/341344.jpg",
+      "genero": "Ciencia ficción"
+    },
+    {
+      "titulo": "Inception",
+      "anio": 2010,
+      "imagen": "https://m.media-amazon.com/images/I/912AErFSBHL._AC_UF894,1000_QL80_.jpg",
+      "genero": "Acción"
+    },
+    {
+      "titulo": "The Dark Knight",
+      "anio": 2008,
+      "imagen": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg",
+      "genero": "Superhéroes"
+    }
+  ]
